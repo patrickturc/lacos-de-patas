@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K&amp;V Laços de Patas — Laços e bandanas no atacado para pet shops</title>
+<meta name="description" content="Peças únicas para o seu pet 🐶 Laços, bandanas de tecido e de feltro no atacado, direto da fábrica para pet shops e banho & tosa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Baloo+2:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* paleta inspirada no Instagram @lacos_depatas */
+  --ceu:#EDF8FC;          /* fundo azul-clarinho do logo */
+  --azul:#36AED6;         /* turquesa da marca */
+  --azul-escuro:#1E7FA3;
+  --marinho:#173B4D;      /* texto */
+  --cinza:#5C7280;
+  --pink:#EC4E94;         /* rosa dos laços */
+  --pink-escuro:#C92F74;
+  --rosa-claro:#FDE3EF;
+  --lilas:#9B6BD1;
+  --amarelo:#FFC53D;
+  --verde:#3FAE6A;
+  --branco:#FFFFFF;
+  --raio:18px;
+  --sombra:0 10px 30px rgba(23,59,77,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',sans-serif;background:var(--ceu);color:var(--marinho);line-height:1.6}
+h1,h2,h3{font-family:'Baloo 2',sans-serif;line-height:1.12}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none}
+.container{width:min(1160px,92%);margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pink)}
+.eyebrow::before{content:"🐾";font-size:.9rem}
+
+/* ---------- topbar ---------- */
+.topbar{background:var(--azul);color:#fff;font-size:.84rem;text-align:center;padding:.5rem 1rem;font-weight:600}
+.topbar strong{color:#FFE49A}
+
+/* ---------- header ---------- */
+header.site{position:sticky;top:0;z-index:50;background:rgba(237,248,252,.93);backdrop-filter:blur(10px);border-bottom:1px solid #D7ECF4}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+.logo{display:flex;align-items:center;gap:.65rem}
+.logo .marca{font-family:'Pacifico',cursive;font-size:1.35rem;color:var(--azul);line-height:1}
+.logo small{display:block;font-weight:700;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cinza);margin-top:.15rem}
+.nav ul{display:flex;gap:1.6rem;list-style:none;font-weight:600;font-size:.95rem}
+.nav ul a{position:relative;padding-bottom:2px}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2.5px;background:var(--pink);border-radius:2px;transition:width .25s}
+.nav ul a:hover::after{width:100%}
+.nav-actions{display:flex;align-items:center;gap:.7rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;border-radius:999px;padding:.7rem 1.4rem;transition:transform .15s,box-shadow .15s,background .15s;font-size:.95rem;font-family:'Baloo 2',sans-serif}
+.btn:hover{transform:translateY(-2px)}
+.btn-primario{background:var(--pink);color:#fff;box-shadow:0 6px 18px rgba(236,78,148,.35)}
+.btn-primario:hover{background:var(--pink-escuro)}
+.btn-azul{background:var(--azul);color:#fff;box-shadow:0 6px 18px rgba(54,174,214,.35)}
+.btn-azul:hover{background:var(--azul-escuro)}
+.btn-fantasma{background:transparent;color:var(--marinho);border:2px solid var(--marinho)}
+.btn-fantasma:hover{background:var(--marinho);color:#fff}
+.btn-carrinho{position:relative;background:var(--rosa-claro);border-radius:999px;width:44px;height:44px;display:grid;place-items:center;font-size:1.1rem}
+.btn-carrinho .badge{position:absolute;top:-4px;right:-4px;background:var(--azul);color:#fff;font-size:.68rem;font-weight:700;min-width:19px;height:19px;border-radius:999px;display:grid;place-items:center;padding:0 4px}
+.hamb{display:none;background:none;font-size:1.5rem}
+
+/* ---------- hero ---------- */
+.hero{padding:4.2rem 0 3.2rem;overflow:hidden;position:relative}
+.hero .nuvem{position:absolute;border-radius:999px;background:#fff;opacity:.55;filter:blur(2px)}
+.hero .nuvem.a{width:220px;height:70px;top:60px;left:-60px}
+.hero .nuvem.b{width:160px;height:54px;bottom:90px;right:8%}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center;position:relative}
+.hero h1{font-size:clamp(2.2rem,4.6vw,3.5rem);font-weight:800;margin:.9rem 0 1.1rem}
+.hero h1 .destaque{color:var(--azul)}
+.hero h1 .fita{position:relative;color:var(--pink);white-space:nowrap}
+.hero h1 .fita svg{position:absolute;left:0;bottom:-8px;width:100%;height:14px}
+.hero p.sub{font-size:1.12rem;color:var(--cinza);max-width:48ch;margin-bottom:1.6rem}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2rem}
+.hero-fatos{display:flex;gap:1.6rem;flex-wrap:wrap}
+.fato{display:flex;align-items:center;gap:.55rem;font-size:.92rem;font-weight:600;color:var(--cinza)}
+
+/* cartela de amostras */
+.cartela{background:var(--branco);border-radius:26px;box-shadow:var(--sombra);padding:1.4rem;position:relative;transform:rotate(1.5deg)}
+.cartela::before{content:"";position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:90px;height:24px;background:rgba(255,197,61,.6);border-radius:3px}
+.cartela h3{font-size:.92rem;text-align:center;letter-spacing:.06em;text-transform:uppercase;color:var(--cinza);margin-bottom:1rem;font-weight:600;font-family:'Figtree'}
+.cartela-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
+.amostra{border-radius:14px;padding:.8rem .4rem .55rem;display:flex;flex-direction:column;align-items:center;gap:.35rem;transition:transform .2s;background:var(--ceu)}
+.amostra:hover{transform:scale(1.06) rotate(-2deg)}
+.amostra span{font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--cinza)}
+
+/* ---------- divisor ---------- */
+.divisor{height:46px;display:block;width:100%}
+
+/* ---------- seções ---------- */
+section{padding:4.2rem 0}
+.sec-cab{max-width:62ch;margin-bottom:2.4rem}
+.sec-cab h2{font-size:clamp(1.7rem,3vw,2.35rem);font-weight:800;margin:.6rem 0 .5rem}
+.sec-cab p{color:var(--cinza);font-size:1.05rem}
+
+/* categorias */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.cat{background:var(--branco);border-radius:var(--raio);padding:1.5rem 1.2rem;text-align:center;box-shadow:var(--sombra);transition:transform .2s;cursor:pointer;border:2px solid transparent}
+.cat:hover{transform:translateY(-5px);border-color:var(--azul)}
+.cat .icone{width:74px;height:74px;margin:0 auto .8rem;border-radius:50%;display:grid;place-items:center;background:var(--ceu)}
+.cat h3{font-size:1.05rem;margin-bottom:.2rem}
+.cat p{font-size:.85rem;color:var(--cinza)}
+
+/* produtos */
+#produtos{background:var(--branco)}
+.filtros{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem}
+.filtro{background:var(--ceu);color:var(--marinho);font-weight:700;font-size:.88rem;padding:.5rem 1.1rem;border-radius:999px;transition:.15s;font-family:'Baloo 2'}
+.filtro:hover{background:#D7ECF4}
+.filtro.ativo{background:var(--azul);color:#fff}
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.prod{background:var(--ceu);border-radius:var(--raio);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.prod:hover{transform:translateY(-5px);box-shadow:var(--sombra)}
+.prod-img{position:relative;display:grid;place-items:center;padding:1.6rem 1rem;min-height:170px;background:#fff;border-bottom:1px dashed #D7ECF4}
+.prod-img .tag{position:absolute;top:.7rem;left:.7rem;background:var(--amarelo);color:#6B4A00;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.25rem .6rem;border-radius:999px}
+.prod-info{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.3rem;flex:1}
+.prod-info h3{font-size:1.02rem}
+.prod-info .min{font-size:.78rem;color:var(--cinza)}
+.prod-preco{display:flex;align-items:baseline;gap:.35rem;margin-top:.3rem}
+.prod-preco strong{font-size:1.3rem;font-family:'Baloo 2';color:var(--pink)}
+.prod-preco span{font-size:.78rem;color:var(--cinza)}
+.prod-add{margin-top:.7rem;background:var(--azul);color:#fff;border-radius:12px;padding:.62rem;font-weight:700;font-size:.92rem;transition:background .15s;font-family:'Baloo 2'}
+.prod-add:hover{background:var(--pink)}
+
+/* como comprar */
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;counter-reset:passo}
+.passo{background:var(--branco);border-radius:var(--raio);padding:1.8rem 1.5rem;box-shadow:var(--sombra);position:relative;counter-increment:passo}
+.passo::before{content:counter(passo,decimal-leading-zero);position:absolute;top:1.1rem;right:1.4rem;font-family:'Baloo 2';font-weight:800;font-size:1.7rem;color:#D7ECF4}
+.passo .icone{width:56px;height:56px;background:var(--rosa-claro);border-radius:14px;display:grid;place-items:center;margin-bottom:1rem;font-size:1.5rem}
+.passo h3{font-size:1.1rem;margin-bottom:.4rem}
+.passo p{font-size:.93rem;color:var(--cinza)}
+
+/* atacado */
+#atacado{background:var(--azul-escuro);color:#E3F4FA}
+#atacado .eyebrow{color:var(--amarelo)}
+#atacado .sec-cab h2{color:#fff}
+#atacado .sec-cab p{color:#BBDFEC}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.tier{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--raio);padding:1.8rem 1.5rem;text-align:center}
+.tier.destaque{background:var(--pink);border-color:var(--pink)}
+.tier .nome{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amarelo)}
+.tier.destaque .nome{color:#FFE2EF}
+.tier .valor{font-family:'Baloo 2';font-weight:800;font-size:2rem;margin:.45rem 0}
+.tier p{font-size:.9rem;color:#BBDFEC}
+.tier.destaque p{color:#FFE2EF}
+.tier .selo{display:inline-block;margin-top:.8rem;background:rgba(255,255,255,.18);font-size:.75rem;font-weight:700;padding:.3rem .8rem;border-radius:999px}
+
+/* temas / coleções */
+.temas{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.tema{border-radius:var(--raio);padding:1.5rem 1.2rem;color:#fff;font-weight:700;box-shadow:var(--sombra);display:flex;flex-direction:column;gap:.2rem;min-height:130px;justify-content:flex-end;transition:transform .2s}
+.tema:hover{transform:translateY(-5px)}
+.tema small{font-weight:600;font-size:.78rem;opacity:.9}
+.tema h3{font-size:1.15rem;color:#fff}
+
+/* depoimentos */
+.depo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.depo{background:var(--branco);border-radius:var(--raio);padding:1.7rem 1.5rem;box-shadow:var(--sombra)}
+.depo p{font-size:.96rem;margin-bottom:1rem}
+.depo .quem{display:flex;align-items:center;gap:.7rem}
+.depo .avatar{width:42px;height:42px;border-radius:50%;background:var(--ceu);display:grid;place-items:center;font-weight:800;font-family:'Baloo 2';color:var(--azul)}
+.depo .quem strong{display:block;font-size:.92rem}
+.depo .quem span{font-size:.8rem;color:var(--cinza)}
+.estrelas{color:var(--amarelo);letter-spacing:2px;margin-bottom:.6rem}
+
+/* CTA final */
+.cta-final{background:linear-gradient(135deg,var(--azul),var(--azul-escuro));border-radius:28px;color:#fff;padding:3.4rem 2.5rem;text-align:center;position:relative;overflow:hidden}
+.cta-final h2{font-size:clamp(1.8rem,3.4vw,2.5rem);font-weight:800;margin-bottom:.6rem}
+.cta-final p{color:#D6EFF8;max-width:50ch;margin:0 auto 1.8rem}
+.cta-final .btn{background:#fff;color:var(--azul-escuro)}
+.cta-final .laco-bg{position:absolute;opacity:.16;width:190px}
+.cta-final .laco-bg.a{top:-30px;left:-30px;transform:rotate(-20deg)}
+.cta-final .laco-bg.b{bottom:-40px;right:-30px;transform:rotate(15deg)}
+
+/* footer */
+footer{background:var(--marinho);color:#A9C4D1;padding:3.5rem 0 2rem;margin-top:4rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:2rem;margin-bottom:2.5rem}
+.foot-grid h4{color:#fff;font-size:.95rem;margin-bottom:.9rem;font-family:'Baloo 2'}
+.foot-grid ul{list-style:none;display:grid;gap:.5rem;font-size:.9rem}
+.foot-grid a:hover{color:#fff}
+.foot-logo{font-family:'Pacifico',cursive;font-size:1.3rem;color:#7FD0EA;margin-bottom:.8rem}
+.foot-base{border-top:1px solid rgba(255,255,255,.12);padding-top:1.4rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.82rem}
+
+/* ---------- carrinho (drawer) ---------- */
+.overlay{position:fixed;inset:0;background:rgba(23,59,77,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:90}
+.overlay.aberto{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:-420px;width:min(400px,94vw);height:100dvh;background:var(--branco);z-index:100;display:flex;flex-direction:column;transition:right .3s ease;box-shadow:-12px 0 40px rgba(0,0,0,.15)}
+.drawer.aberto{right:0}
+.drawer-cab{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.4rem;border-bottom:1px solid #E3F0F6}
+.drawer-cab h3{font-size:1.25rem}
+.drawer-fechar{background:var(--ceu);width:36px;height:36px;border-radius:50%;font-size:1.05rem}
+.drawer-corpo{flex:1;overflow-y:auto;padding:1.2rem 1.4rem;display:grid;gap:1rem;align-content:start}
+.carrinho-vazio{text-align:center;color:var(--cinza);padding:3rem 1rem}
+.item{display:grid;grid-template-columns:54px 1fr auto;gap:.8rem;align-items:center}
+.item .mini{width:54px;height:54px;background:var(--ceu);border-radius:12px;display:grid;place-items:center}
+.item h4{font-size:.92rem}
+.item .preco{font-size:.82rem;color:var(--cinza)}
+.qtd{display:flex;align-items:center;gap:.45rem}
+.qtd button{width:26px;height:26px;border-radius:8px;background:var(--ceu);font-weight:700}
+.qtd span{min-width:20px;text-align:center;font-weight:700;font-size:.92rem}
+.drawer-rodape{border-top:1px solid #E3F0F6;padding:1.2rem 1.4rem;display:grid;gap:.8rem}
+.minimo-aviso{font-size:.8rem;background:var(--ceu);color:var(--azul-escuro);font-weight:600;padding:.55rem .8rem;border-radius:10px}
+.minimo-aviso.ok{background:#E6F6EA;color:#1E7B3C}
+.total{display:flex;justify-content:space-between;font-weight:800;font-family:'Baloo 2';font-size:1.25rem}
+.btn-whats{background:#25D366;color:#fff;justify-content:center;width:100%}
+.btn-whats:hover{background:#1EBE5A}
+.btn-whats[disabled]{background:#C2D5C8;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* toast */
+.toast{position:fixed;bottom:1.4rem;left:50%;transform:translate(-50%,80px);background:var(--marinho);color:#fff;padding:.75rem 1.4rem;border-radius:999px;font-weight:600;font-size:.9rem;transition:transform .3s;z-index:120}
+.toast.mostrar{transform:translate(-50%,0)}
+
+/* ---------- responsivo ---------- */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:2.4rem}
+  .cartela{transform:none;max-width:440px;margin:0 auto}
+  .cats,.temas{grid-template-columns:repeat(2,1fr)}
+  .prod-grid{grid-template-columns:repeat(2,1fr)}
+  .passos,.tiers,.depo-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){
+  .nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:var(--branco);flex-direction:column;gap:0;padding:1rem 0;box-shadow:var(--sombra)}
+  .nav ul.aberto{display:flex}
+  .nav ul li{padding:.7rem 1.6rem}
+  .hamb{display:block}
+  .nav .btn-primario{display:none}
+  .prod-grid{grid-template-columns:1fr}
+  .foot-grid,.temas{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+:focus-visible{outline:3px solid var(--pink);outline-offset:2px;border-radius:6px}
+</style>
+</head>
+<body>
+
+<!-- SVGs reutilizáveis (troque pelos seus produtos reais depois) -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <!-- laço (bow) -->
+    <g id="laco">
+      <path d="M50 50 C20 20, 5 25, 8 45 C10 62, 32 58, 50 50 Z" fill="var(--c1,#EC4E94)"/>
+      <path d="M50 50 C80 20, 95 25, 92 45 C90 62, 68 58, 50 50 Z" fill="var(--c1,#EC4E94)"/>
+      <path d="M50 50 C28 28, 16 30, 18 44 C20 56, 36 54, 50 50 Z" fill="var(--c2,#FDE3EF)" opacity=".55"/>
+      <path d="M50 50 C72 28, 84 30, 82 44 C80 56, 64 54, 50 50 Z" fill="var(--c2,#FDE3EF)" opacity=".55"/>
+      <path d="M44 52 L36 76 L44 72 L48 78 Z" fill="var(--c1,#EC4E94)"/>
+      <path d="M56 52 L64 76 L56 72 L52 78 Z" fill="var(--c1,#EC4E94)"/>
+      <circle cx="50" cy="50" r="9" fill="var(--c3,#C92F74)"/>
+      <circle cx="47" cy="47" r="2.5" fill="#fff" opacity=".7"/>
+    </g>
+    <!-- bandana de tecido -->
+    <g id="bandana">
+      <path d="M15 30 Q50 22 85 30 L52 78 Q50 80 48 78 Z" fill="var(--c1,#36AED6)"/>
+      <path d="M15 30 Q50 22 85 30 L82 38 Q50 30 18 38 Z" fill="var(--c3,#1E7FA3)"/>
+      <circle cx="42" cy="48" r="3.4" fill="var(--c2,#fff)" opacity=".9"/>
+      <circle cx="58" cy="48" r="3.4" fill="var(--c2,#fff)" opacity=".9"/>
+      <circle cx="50" cy="60" r="3.4" fill="var(--c2,#fff)" opacity=".9"/>
+    </g>
+    <!-- bandana de feltro (borda ondulada) -->
+    <g id="feltro">
+      <path d="M16 30 Q50 24 84 30 L78 44 Q82 50 76 54 L70 64 Q72 70 64 72 L54 80 Q50 83 46 80 L36 72 Q28 70 30 64 L24 54 Q18 50 22 44 Z" fill="var(--c1,#F49AC1)"/>
+      <circle cx="38" cy="46" r="4" fill="var(--c2,#fff)" opacity=".85"/>
+      <circle cx="62" cy="46" r="4" fill="var(--c2,#fff)" opacity=".85"/>
+      <circle cx="50" cy="62" r="5.5" fill="var(--c3,#EC4E94)"/>
+    </g>
+    <!-- coração com glitter (dos laços do feed) -->
+    <g id="coracao">
+      <path d="M50 78 C20 56 16 36 30 28 C40 22 48 28 50 34 C52 28 60 22 70 28 C84 36 80 56 50 78 Z" fill="var(--c1,#EC4E94)"/>
+      <circle cx="42" cy="40" r="1.6" fill="#fff" opacity=".8"/><circle cx="56" cy="46" r="1.6" fill="#fff" opacity=".8"/><circle cx="48" cy="56" r="1.6" fill="#fff" opacity=".8"/><circle cx="62" cy="38" r="1.6" fill="#fff" opacity=".8"/>
+    </g>
+  </defs>
+</svg>
+
+<div class="topbar">🎀 Atacado para pet shops e banho &amp; tosa — pedido mínimo de <strong>R$ 300</strong> · enviamos para todo o Brasil</div>
+
+<header class="site">
+  <div class="container nav">
+    <a class="logo" href="#">
+      <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true"><use href="#laco" style="--c1:#36AED6;--c2:#BCE6F4;--c3:#1E7FA3"/></svg>
+      <span><span class="marca">Laços de Patas</span><small>K&amp;V · atacado pet</small></span>
+    </a>
+    <ul id="menu">
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#colecoes">Coleções</a></li>
+      <li><a href="#como-comprar">Como comprar</a></li>
+      <li><a href="#atacado">Atacado</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-carrinho" id="abrir-carrinho" aria-label="Abrir carrinho">🛒<span class="badge" id="badge">0</span></button>
+      <a class="btn btn-primario" href="#produtos">Fazer pedido</a>
+      <button class="hamb" id="hamb" aria-label="Abrir menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="nuvem a" aria-hidden="true"></div>
+  <div class="nuvem b" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Peças únicas para o seu pet</span>
+      <h1><span class="destaque">Laços e bandanas</span> que <span class="fita">encantam tutores<svg viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 Q40 2 80 8 T160 7 T218 8" fill="none" stroke="#FFC53D" stroke-width="5" stroke-linecap="round"/></svg></span> e giram rápido na sua loja</h1>
+      <p class="sub">Laços com apliques, bandanas de tecido estampadas e bandanas de feltro feitas à mão — no atacado, direto da fábrica para o seu pet shop ou banho &amp; tosa.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primario" href="#produtos">Ver catálogo de atacado</a>
+        <a class="btn btn-fantasma" href="https://www.instagram.com/lacos_depatas" target="_blank" rel="noopener">📷 @lacos_depatas</a>
+      </div>
+      <div class="hero-fatos">
+        <div class="fato">✅ Produção artesanal</div>
+        <div class="fato">✅ Coleções novas todo mês</div>
+        <div class="fato">✅ Atendimento via WhatsApp</div>
+      </div>
+    </div>
+
+    <div class="cartela" aria-hidden="true">
+      <h3>Cartela de amostras · coleção do mês</h3>
+      <div class="cartela-grid">
+        <div class="amostra"><svg width="64" height="64" viewBox="0 0 100 100"><use href="#laco" style="--c1:#EC4E94;--c2:#FDE3EF;--c3:#C92F74"/></svg><span>Pink</span></div>
+        <div class="amostra"><svg width="64" height="64" viewBox="0 0 100 100"><use href="#laco" style="--c1:#7FC8E8;--c2:#DDF1FA;--c3:#36AED6"/></svg><span>Azul bebê</span></div>
+        <div class="amostra"><svg width="64" height="64" viewBox="0 0 100 100"><use href="#laco" style="--c1:#9B6BD1;--c2:#E6D9F7;--c3:#7445B0"/></svg><span>Lilás</span></div>
+        <div class="amostra"><svg width="64" height="64" viewBox="0 0 100 100"><use href="#laco" style="--c1:#FFC53D;--c2:#FFE9B8;--c3:#D89A12"/></svg><span>Amarelo</span></div>
+        <div class="amostra"><svg width="64" height="64" viewBox="0 0 100 100"><use href="#bandana" style="--c1:#EC4E94;--c2:#fff;--c3:#C92F74"/></svg><span>Poá pink</span></div>
+        <div class="amostra"><svg width="64" height="64" viewBox="0 0 100 100"><use href="#feltro" style="--c1:#F49AC1;--c2:#fff;--c3:#EC4E94"/></svg><span>Feltro</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="divisor" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 23 Q120 0 240 23 T480 23 T720 23 T960 23 T1200 23 T1440 23 L1440 46 L0 46 Z" fill="#FFFFFF"/></svg>
+
+<section id="categorias" style="background:#fff;padding-top:2.5rem">
+  <div class="container">
+    <div class="sec-cab">
+      <span class="eyebrow">O que produzimos</span>
+      <h2>Tudo que sai do banho &amp; tosa mais bonito</h2>
+      <p>Quatro linhas pensadas para giro rápido na recepção do pet shop e na finalização do banho.</p>
+    </div>
+    <div class="cats">
+      <div class="cat" data-filtro="lacos"><div class="icone"><svg width="46" height="46" viewBox="0 0 100 100"><use href="#laco" style="--c1:#EC4E94;--c2:#FDE3EF;--c3:#C92F74"/></svg></div><h3>Laços</h3><p>Gorgurão com apliques e pedrarias</p></div>
+      <div class="cat" data-filtro="bandanas"><div class="icone"><svg width="46" height="46" viewBox="0 0 100 100"><use href="#bandana" style="--c1:#36AED6;--c2:#fff;--c3:#1E7FA3"/></svg></div><h3>Bandanas de tecido</h3><p>Estampas divertidas e personagens</p></div>
+      <div class="cat" data-filtro="feltro"><div class="icone"><svg width="46" height="46" viewBox="0 0 100 100"><use href="#feltro" style="--c1:#F49AC1;--c2:#fff;--c3:#EC4E94"/></svg></div><h3>Bandanas de feltro</h3><p>Modelagens criativas feitas à mão</p></div>
+      <div class="cat" data-filtro="kits"><div class="icone"><svg width="46" height="46" viewBox="0 0 100 100"><use href="#coracao" style="--c1:#EC4E94"/></svg></div><h3>Kits sortidos</h3><p>Banho &amp; tosa e datas especiais</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="produtos">
+  <div class="container">
+    <div class="sec-cab">
+      <span class="eyebrow">Catálogo de atacado</span>
+      <h2>Preços por dúzia, pensados para revenda</h2>
+      <p>Margem saudável para o seu pet shop: revenda sugerida de 2,5x a 3x o valor de atacado. As ilustrações abaixo são apenas marcação — depois entram as fotos reais dos produtos.</p>
+    </div>
+    <div class="filtros" role="tablist">
+      <button class="filtro ativo" data-filtro="todos">Todos</button>
+      <button class="filtro" data-filtro="lacos">Laços</button>
+      <button class="filtro" data-filtro="bandanas">Bandanas de tecido</button>
+      <button class="filtro" data-filtro="feltro">Bandanas de feltro</button>
+      <button class="filtro" data-filtro="kits">Kits</button>
+    </div>
+    <div class="prod-grid" id="prod-grid"></div>
+  </div>
+</section>
+
+<section id="colecoes" style="background:#fff">
+  <div class="container">
+    <div class="sec-cab">
+      <span class="eyebrow">Coleções temáticas</span>
+      <h2>Datas que movimentam o seu caixa o ano inteiro</h2>
+      <p>Trabalhamos com pré-venda das coleções sazonais para o seu estoque chegar antes da data.</p>
+    </div>
+    <div class="temas">
+      <a class="tema" href="#produtos" style="background:linear-gradient(135deg,#EC4E94,#C92F74)"><small>Maio</small><h3>Dia das Mães 💐</h3></a>
+      <a class="tema" href="#produtos" style="background:linear-gradient(135deg,#3FAE6A,#FFC53D)"><small>Junho · Copa</small><h3>Brasil 🇧🇷</h3></a>
+      <a class="tema" href="#produtos" style="background:linear-gradient(135deg,#E2702E,#C9442A)"><small>Junho · Julho</small><h3>Festa Junina 🎪</h3></a>
+      <a class="tema" href="#produtos" style="background:linear-gradient(135deg,#36AED6,#1E7FA3)"><small>Dezembro</small><h3>Natal 🎄</h3></a>
+    </div>
+  </div>
+</section>
+
+<section id="como-comprar">
+  <div class="container">
+    <div class="sec-cab">
+      <span class="eyebrow">Como comprar</span>
+      <h2>Do pedido à prateleira em 3 passos</h2>
+    </div>
+    <div class="passos">
+      <div class="passo">
+        <div class="icone">🛍️</div>
+        <h3>Monte seu pedido</h3>
+        <p>Navegue pelo catálogo, escolha cores e quantidades por dúzia e adicione ao carrinho. Pedido mínimo de R$ 300.</p>
+      </div>
+      <div class="passo">
+        <div class="icone">💬</div>
+        <h3>Finalize no WhatsApp</h3>
+        <p>Seu carrinho vira uma mensagem pronta. Nossa equipe confirma estoque, frete e forma de pagamento (Pix, boleto ou cartão).</p>
+      </div>
+      <div class="passo">
+        <div class="icone">🚚</div>
+        <h3>Receba e revenda</h3>
+        <p>Produção e envio em até 5 dias úteis para todo o Brasil, com peças prontas para expor na recepção.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="atacado">
+  <div class="container">
+    <div class="sec-cab">
+      <span class="eyebrow">Vantagens progressivas</span>
+      <h2>Quanto mais o seu pet shop cresce, melhor o seu preço</h2>
+      <p>Descontos aplicados automaticamente sobre o valor do pedido.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <div class="nome">Filhote</div>
+        <div class="valor">R$ 300+</div>
+        <p>Pedido mínimo de atacado, ideal para a primeira compra e testar o giro das peças.</p>
+        <span class="selo">Tabela cheia</span>
+      </div>
+      <div class="tier destaque">
+        <div class="nome">Melhor amigo</div>
+        <div class="valor">R$ 700+</div>
+        <p>O pedido mais comum entre pet shops parceiros, com reposição mensal.</p>
+        <span class="selo">5% de desconto</span>
+      </div>
+      <div class="tier">
+        <div class="nome">Matilha</div>
+        <div class="valor">R$ 1.500+</div>
+        <p>Para redes e distribuidores. Inclui prioridade de produção e condições de frete.</p>
+        <span class="selo">10% de desconto</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="container">
+    <div class="sec-cab">
+      <span class="eyebrow">Quem já revende</span>
+      <h2>Pet shops parceiros pelo Brasil</h2>
+    </div>
+    <div class="depo-grid">
+      <div class="depo">
+        <div class="estrelas">★★★★★</div>
+        <p>"Os laços têm acabamento impecável. As tutoras perguntam de onde vem e a peça praticamente se vende sozinha na saída do banho."</p>
+        <div class="quem"><div class="avatar">M</div><div><strong>Mariana S.</strong><span>Pet Shop Aumigos · Campinas/SP</span></div></div>
+      </div>
+      <div class="depo">
+        <div class="estrelas">★★★★★</div>
+        <p>"As bandanas estampadas são as queridinhas da criançada que acompanha os pais na loja. Reposição rápida, direto no WhatsApp."</p>
+        <div class="quem"><div class="avatar">R</div><div><strong>Rodrigo L.</strong><span>Banho &amp; Tosa do Léo · Piracicaba/SP</span></div></div>
+      </div>
+      <div class="depo">
+        <div class="estrelas">★★★★★</div>
+        <p>"As coleções de datas comemorativas viram febre. Na Festa Junina vendi tudo em duas semanas e já garanti o próximo pedido."</p>
+        <div class="quem"><div class="avatar">C</div><div><strong>Camila F.</strong><span>Espaço Pet Carinho · Indaiatuba/SP</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-final">
+      <svg class="laco-bg a" viewBox="0 0 100 100" aria-hidden="true"><use href="#laco" style="--c1:#fff;--c2:#fff;--c3:#fff"/></svg>
+      <svg class="laco-bg b" viewBox="0 0 100 100" aria-hidden="true"><use href="#laco" style="--c1:#fff;--c2:#fff;--c3:#fff"/></svg>
+      <h2>Pronto para encher a vitrine do seu pet shop?</h2>
+      <p>Monte seu primeiro pedido agora ou fale com a nossa equipe para receber a cartela de cores completa da coleção do mês.</p>
+      <a class="btn" href="#produtos">Começar meu pedido</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Laços de Patas</div>
+        <p style="font-size:.9rem;max-width:32ch">K&amp;V Laços de Patas — peças únicas para o seu pet 🐶 Acessórios artesanais no atacado para pet shops de todo o Brasil.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#produtos">Catálogo</a></li>
+          <li><a href="#colecoes">Coleções</a></li>
+          <li><a href="#como-comprar">Como comprar</a></li>
+          <li><a href="#atacado">Atacado</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Atendimento</h4>
+        <ul>
+          <li><a href="https://wa.me/5519900000000" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/lacos_depatas" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:contato@lacosdepatas.com.br">contato@lacosdepatas.com.br</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horário</h4>
+        <ul>
+          <li>Segunda a sexta · 8h às 18h</li>
+          <li>Sábado · 8h às 12h</li>
+          <li>Enviamos para todo o Brasil</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 K&amp;V Laços de Patas — todos os direitos reservados.</span>
+      <span>Vendas exclusivas para revenda (CNPJ).</span>
+    </div>
+  </div>
+</footer>
+
+<!-- carrinho -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Carrinho de pedido">
+  <div class="drawer-cab">
+    <h3>Seu pedido 🎀</h3>
+    <button class="drawer-fechar" id="fechar-carrinho" aria-label="Fechar carrinho">✕</button>
+  </div>
+  <div class="drawer-corpo" id="drawer-corpo"></div>
+  <div class="drawer-rodape">
+    <div class="minimo-aviso" id="minimo-aviso"></div>
+    <div class="total"><span>Total</span><span id="total">R$ 0,00</span></div>
+    <button class="btn btn-whats" id="btn-whats">Finalizar pedido no WhatsApp</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast">Adicionado ao pedido ✓</div>
+
+<script>
+// ============== CONFIGURAÇÃO ==============
+const WHATSAPP = "5519900000000"; // troque pelo número da loja (somente dígitos, com DDI 55)
+const PEDIDO_MINIMO = 300;
+
+// ============== PRODUTOS ==============
+// Para usar fotos reais: adicione a propriedade img:"caminho/da/foto.jpg" em cada produto.
+const PRODUTOS = [
+  {id:1, nome:"Laço Gorgurão com Aplique",   cat:"lacos",   preco:36, un:"dúzia", min:"Mín. 1 dúzia · cores sortidas",       tag:"Mais vendido",     svg:"laco",    c:{c1:"#EC4E94",c2:"#FDE3EF",c3:"#C92F74"}},
+  {id:2, nome:"Laço Luxo com Pompom",        cat:"lacos",   preco:48, un:"dúzia", min:"Mín. 1 dúzia · azul bebê e pink",     tag:"",                 svg:"laco",    c:{c1:"#7FC8E8",c2:"#DDF1FA",c3:"#36AED6"}},
+  {id:3, nome:"Laço Dia das Mães",           cat:"lacos",   preco:42, un:"dúzia", min:"Apliques 'Mãe te amo' e 'Super Mamãe'", tag:"Sazonal",        svg:"laco",    c:{c1:"#9B6BD1",c2:"#E6D9F7",c3:"#7445B0"}},
+  {id:4, nome:"Laço Brasil",                 cat:"lacos",   preco:42, un:"dúzia", min:"Verde e amarelo · época de Copa",     tag:"Sazonal",          svg:"laco",    c:{c1:"#3FAE6A",c2:"#D7F2E1",c3:"#1F7A44"}},
+  {id:5, nome:"Bandana Estampada Sublimada", cat:"bandanas",preco:60, un:"dúzia", min:"Mín. 1 dúzia · estampas variadas",    tag:"Novidade",         svg:"bandana", c:{c1:"#36AED6",c2:"#fff",c3:"#1E7FA3"}},
+  {id:6, nome:"Bandana Poá com Viés",        cat:"bandanas",preco:54, un:"dúzia", min:"Mín. 1 dúzia · P, M e G",             tag:"",                 svg:"bandana", c:{c1:"#EC4E94",c2:"#fff",c3:"#C92F74"}},
+  {id:7, nome:"Bandana de Feltro com Aplique",cat:"feltro", preco:66, un:"dúzia", min:"Modelagens criativas feitas à mão",   tag:"Feita à mão",      svg:"feltro",  c:{c1:"#F49AC1",c2:"#fff",c3:"#EC4E94"}},
+  {id:8, nome:"Bandana de Feltro Temática",  cat:"feltro",  preco:72, un:"dúzia", min:"Princesas, docinhos e bichinhos",     tag:"",                 svg:"feltro",  c:{c1:"#FFC53D",c2:"#fff",c3:"#E2702E"}},
+  {id:9, nome:"Kit Banho & Tosa 100 pçs",    cat:"kits",    preco:250,un:"kit",   min:"Laços sortidos · giro garantido",     tag:"Custo-benefício",  svg:"laco",    c:{c1:"#36AED6",c2:"#DDF1FA",c3:"#1E7FA3"}},
+  {id:10,nome:"Kit Recepção 50 pçs",         cat:"kits",    preco:160,un:"kit",   min:"Laços + bandanas sortidas",           tag:"",                 svg:"coracao", c:{c1:"#EC4E94"}},
+];
+
+const fmt = v => v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+
+// ============== RENDER DO CATÁLOGO ==============
+const grid = document.getElementById("prod-grid");
+function renderProdutos(filtro="todos"){
+  grid.innerHTML = PRODUTOS
+    .filter(p => filtro==="todos" || p.cat===filtro)
+    .map(p => `
+      <article class="prod">
+        <div class="prod-img">
+          ${p.tag ? `<span class="tag">${p.tag}</span>` : ""}
+          ${p.img
+            ? `<img src="${p.img}" alt="${p.nome}" style="max-height:140px;border-radius:12px">`
+            : `<svg width="110" height="110" viewBox="0 0 100 100" aria-hidden="true"><use href="#${p.svg}" style="--c1:${p.c.c1};--c2:${p.c.c2||'#fff'};--c3:${p.c.c3||p.c.c1}"/></svg>`}
+        </div>
+        <div class="prod-info">
+          <h3>${p.nome}</h3>
+          <span class="min">${p.min}</span>
+          <div class="prod-preco"><strong>${fmt(p.preco)}</strong><span>/ ${p.un}</span></div>
+          <button class="prod-add" onclick="addCarrinho(${p.id})">Adicionar ao pedido</button>
+        </div>
+      </article>`).join("");
+}
+renderProdutos();
+
+document.querySelectorAll(".filtro").forEach(b=>{
+  b.addEventListener("click",()=>{
+    document.querySelectorAll(".filtro").forEach(x=>x.classList.remove("ativo"));
+    b.classList.add("ativo");
+    renderProdutos(b.dataset.filtro);
+  });
+});
+document.querySelectorAll(".cat").forEach(c=>{
+  c.addEventListener("click",()=>{
+    const f = c.dataset.filtro;
+    document.querySelectorAll(".filtro").forEach(x=>x.classList.toggle("ativo",x.dataset.filtro===f));
+    renderProdutos(f);
+    document.getElementById("produtos").scrollIntoView({behavior:"smooth"});
+  });
+});
+
+// ============== CARRINHO ==============
+let carrinho = {}; // {id: qtd}
+
+const drawer = document.getElementById("drawer");
+const overlay = document.getElementById("overlay");
+const corpo = document.getElementById("drawer-corpo");
+const badge = document.getElementById("badge");
+const totalEl = document.getElementById("total");
+const avisoEl = document.getElementById("minimo-aviso");
+const btnWhats = document.getElementById("btn-whats");
+
+function abrirCarrinho(){drawer.classList.add("aberto");overlay.classList.add("aberto")}
+function fecharCarrinho(){drawer.classList.remove("aberto");overlay.classList.remove("aberto")}
+document.getElementById("abrir-carrinho").addEventListener("click",abrirCarrinho);
+document.getElementById("fechar-carrinho").addEventListener("click",fecharCarrinho);
+overlay.addEventListener("click",fecharCarrinho);
+
+function addCarrinho(id){
+  carrinho[id] = (carrinho[id]||0)+1;
+  renderCarrinho();
+  mostrarToast();
+}
+function mudarQtd(id,delta){
+  carrinho[id] = (carrinho[id]||0)+delta;
+  if(carrinho[id]<=0) delete carrinho[id];
+  renderCarrinho();
+}
+function totalCarrinho(){
+  return Object.entries(carrinho).reduce((t,[id,q])=>{
+    const p = PRODUTOS.find(x=>x.id==id); return t + p.preco*q;
+  },0);
+}
+function renderCarrinho(){
+  const ids = Object.keys(carrinho);
+  badge.textContent = ids.reduce((t,id)=>t+carrinho[id],0);
+  if(!ids.length){
+    corpo.innerHTML = `<div class="carrinho-vazio">Seu pedido está vazio.<br>Adicione produtos do catálogo 🎀</div>`;
+  } else {
+    corpo.innerHTML = ids.map(id=>{
+      const p = PRODUTOS.find(x=>x.id==id);
+      return `<div class="item">
+        <div class="mini"><svg width="38" height="38" viewBox="0 0 100 100"><use href="#${p.svg}" style="--c1:${p.c.c1};--c2:${p.c.c2||'#fff'};--c3:${p.c.c3||p.c.c1}"/></svg></div>
+        <div><h4>${p.nome}</h4><span class="preco">${fmt(p.preco)} / ${p.un}</span></div>
+        <div class="qtd">
+          <button onclick="mudarQtd(${p.id},-1)" aria-label="Diminuir">−</button>
+          <span>${carrinho[id]}</span>
+          <button onclick="mudarQtd(${p.id},1)" aria-label="Aumentar">+</button>
+        </div>
+      </div>`;
+    }).join("");
+  }
+  const total = totalCarrinho();
+  totalEl.textContent = fmt(total);
+  const falta = PEDIDO_MINIMO - total;
+  if(total===0){
+    avisoEl.textContent = `Pedido mínimo de atacado: ${fmt(PEDIDO_MINIMO)}`;
+    avisoEl.className = "minimo-aviso";
+    btnWhats.disabled = true;
+  } else if(falta>0){
+    avisoEl.textContent = `Faltam ${fmt(falta)} para atingir o pedido mínimo`;
+    avisoEl.className = "minimo-aviso";
+    btnWhats.disabled = true;
+  } else {
+    avisoEl.textContent = "✓ Pedido mínimo atingido — pode finalizar!";
+    avisoEl.className = "minimo-aviso ok";
+    btnWhats.disabled = false;
+  }
+}
+renderCarrinho();
+
+// ============== CHECKOUT WHATSAPP ==============
+btnWhats.addEventListener("click",()=>{
+  const linhas = Object.entries(carrinho).map(([id,q])=>{
+    const p = PRODUTOS.find(x=>x.id==id);
+    return `• ${q}x ${p.nome} (${p.un}) — ${fmt(p.preco*q)}`;
+  });
+  const msg = encodeURIComponent(
+    `Olá, Laços de Patas! 🎀\nQuero fazer um pedido de atacado:\n\n${linhas.join("\n")}\n\n*Total: ${fmt(totalCarrinho())}*\n\nNome do pet shop:\nCNPJ:\nCidade/UF:`
+  );
+  window.open(`https://wa.me/${WHATSAPP}?text=${msg}`,"_blank");
+});
+
+// ============== UI ==============
+const toast = document.getElementById("toast");
+let toastTimer;
+function mostrarToast(){
+  toast.classList.add("mostrar");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>toast.classList.remove("mostrar"),1800);
+}
+document.getElementById("hamb").addEventListener("click",()=>{
+  document.getElementById("menu").classList.toggle("aberto");
+});
+document.querySelectorAll("#menu a").forEach(a=>a.addEventListener("click",()=>document.getElementById("menu").classList.remove("aberto")));
+</script>
+</body>
+</html>

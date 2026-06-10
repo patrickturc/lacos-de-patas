@@ -212,6 +212,32 @@ footer{background:var(--marinho);color:#A9C4D1;padding:3.5rem 0 2rem;margin-top:
 .toast{position:fixed;bottom:1.4rem;left:50%;transform:translate(-50%,80px);background:var(--marinho);color:#fff;padding:.75rem 1.4rem;border-radius:999px;font-weight:600;font-size:.9rem;transition:transform .3s;z-index:120}
 .toast.mostrar{transform:translate(-50%,0)}
 
+/* ---------- login / cadastro ---------- */
+.btn-conta{background:var(--ceu);color:var(--marinho);border-radius:999px;padding:.6rem 1.1rem;font-weight:700;font-size:.88rem;display:inline-flex;align-items:center;gap:.4rem;font-family:'Baloo 2'}
+.btn-conta:hover{background:#D7ECF4}
+.modal-overlay{position:fixed;inset:0;background:rgba(23,59,77,.5);display:none;place-items:center;z-index:110;padding:1rem}
+.modal-overlay.aberto{display:grid}
+.modal{background:#fff;border-radius:22px;width:min(440px,100%);max-height:92dvh;overflow-y:auto;padding:1.8rem 1.6rem;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.modal .fechar{position:absolute;top:1rem;right:1rem;background:var(--ceu);width:34px;height:34px;border-radius:50%;font-size:1rem}
+.modal h3{font-size:1.4rem;margin-bottom:.2rem}
+.modal .sub{font-size:.9rem;color:var(--cinza);margin-bottom:1.2rem}
+.abas{display:flex;background:var(--ceu);border-radius:999px;padding:.3rem;margin-bottom:1.3rem}
+.aba{flex:1;border-radius:999px;padding:.55rem;font-weight:700;font-family:'Baloo 2';font-size:.92rem;background:transparent;color:var(--cinza);transition:.15s}
+.aba.ativa{background:#fff;color:var(--marinho);box-shadow:0 2px 8px rgba(23,59,77,.12)}
+.form{display:grid;gap:.8rem}
+.campo label{display:block;font-size:.8rem;font-weight:700;margin-bottom:.25rem;color:var(--marinho)}
+.campo input{width:100%;border:2px solid #D7ECF4;border-radius:12px;padding:.65rem .85rem;font-family:inherit;font-size:.95rem;color:var(--marinho);background:#FBFEFF;transition:border-color .15s}
+.campo input:focus{outline:none;border-color:var(--azul)}
+.campo input.erro{border-color:#E0526B}
+.form .duplo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.form-msg{font-size:.85rem;font-weight:600;border-radius:10px;padding:.55rem .8rem;display:none}
+.form-msg.erro{display:block;background:#FCE8EC;color:#B42745}
+.form-msg.ok{display:block;background:#E6F6EA;color:#1E7B3C}
+.form .btn{justify-content:center;width:100%}
+.form .trocar{text-align:center;font-size:.85rem;color:var(--cinza)}
+.form .trocar button{background:none;color:var(--pink);font-weight:700;text-decoration:underline}
+@media (max-width:680px){.form .duplo{grid-template-columns:1fr}}
+
 /* ---------- responsivo ---------- */
 @media (max-width:980px){
   .hero-grid{grid-template-columns:1fr;gap:2.4rem}
@@ -291,6 +317,7 @@ footer{background:var(--marinho);color:#A9C4D1;padding:3.5rem 0 2rem;margin-top:
       <li><a href="#atacado">Atacado</a></li>
     </ul>
     <div class="nav-actions">
+      <button class="btn-conta" id="btn-conta">👤 Entrar</button>
       <button class="btn-carrinho" id="abrir-carrinho" aria-label="Abrir carrinho">🛒<span class="badge" id="badge">0</span></button>
       <a class="btn btn-primario" href="#produtos">Fazer pedido</a>
       <button class="hamb" id="hamb" aria-label="Abrir menu">☰</button>
@@ -532,6 +559,47 @@ footer{background:var(--marinho);color:#A9C4D1;padding:3.5rem 0 2rem;margin-top:
   </div>
 </aside>
 
+<!-- modal login / cadastro -->
+<div class="modal-overlay" id="modal-conta">
+  <div class="modal" role="dialog" aria-label="Entrar ou cadastrar">
+    <button class="fechar" id="fechar-modal" aria-label="Fechar">✕</button>
+    <h3 id="modal-titulo">Bem-vindo de volta! 🎀</h3>
+    <p class="sub" id="modal-sub">Entre para finalizar seus pedidos mais rápido.</p>
+    <div class="abas">
+      <button class="aba ativa" id="aba-login">Entrar</button>
+      <button class="aba" id="aba-cadastro">Cadastrar minha loja</button>
+    </div>
+
+    <!-- LOGIN -->
+    <form class="form" id="form-login" novalidate>
+      <div class="campo"><label for="log-email">E-mail</label><input type="email" id="log-email" placeholder="voce@petshop.com.br" autocomplete="email"></div>
+      <div class="campo"><label for="log-senha">Senha</label><input type="password" id="log-senha" placeholder="••••••••" autocomplete="current-password"></div>
+      <div class="form-msg" id="login-msg"></div>
+      <button type="submit" class="btn btn-azul">Entrar</button>
+      <div class="trocar">Ainda não tem conta? <button type="button" id="ir-cadastro">Cadastre sua loja</button></div>
+    </form>
+
+    <!-- CADASTRO -->
+    <form class="form" id="form-cadastro" style="display:none" novalidate>
+      <div class="campo"><label for="cad-nome">Seu nome</label><input type="text" id="cad-nome" placeholder="Maria Silva" autocomplete="name"></div>
+      <div class="campo"><label for="cad-loja">Nome do pet shop</label><input type="text" id="cad-loja" placeholder="Pet Shop Aumigos"></div>
+      <div class="duplo">
+        <div class="campo"><label for="cad-cnpj">CNPJ</label><input type="text" id="cad-cnpj" placeholder="00.000.000/0001-00" inputmode="numeric"></div>
+        <div class="campo"><label for="cad-whats">WhatsApp</label><input type="tel" id="cad-whats" placeholder="(19) 99999-9999" inputmode="tel"></div>
+      </div>
+      <div class="campo"><label for="cad-cidade">Cidade / UF</label><input type="text" id="cad-cidade" placeholder="Capivari / SP"></div>
+      <div class="campo"><label for="cad-email">E-mail</label><input type="email" id="cad-email" placeholder="voce@petshop.com.br" autocomplete="email"></div>
+      <div class="duplo">
+        <div class="campo"><label for="cad-senha">Senha</label><input type="password" id="cad-senha" placeholder="Mín. 6 caracteres" autocomplete="new-password"></div>
+        <div class="campo"><label for="cad-senha2">Repetir senha</label><input type="password" id="cad-senha2" placeholder="Repita a senha" autocomplete="new-password"></div>
+      </div>
+      <div class="form-msg" id="cadastro-msg"></div>
+      <button type="submit" class="btn btn-primario">Criar minha conta</button>
+      <div class="trocar">Já tem conta? <button type="button" id="ir-login">Entrar</button></div>
+    </form>
+  </div>
+</div>
+
 <div class="toast" id="toast">Adicionado ao pedido ✓</div>
 
 <script>
@@ -667,14 +735,140 @@ renderCarrinho();
 
 // ============== CHECKOUT WHATSAPP ==============
 btnWhats.addEventListener("click",()=>{
+  // pede login/cadastro antes de finalizar, para já enviar os dados da loja
+  if(!usuarioLogado()){
+    abrirModal("cadastro");
+    document.getElementById("cadastro-msg").className = "form-msg ok";
+    document.getElementById("cadastro-msg").textContent = "Cadastre sua loja para finalizar o pedido — seus dados já vão preenchidos no WhatsApp!";
+    return;
+  }
+  const u = usuarioLogado();
   const linhas = Object.entries(carrinho).map(([id,q])=>{
     const p = PRODUTOS.find(x=>x.id==id);
     return `• ${q}x ${p.nome} (${p.un}) — ${fmt(p.preco*q)}`;
   });
   const msg = encodeURIComponent(
-    `Olá, Laços de Patas! 🎀\nQuero fazer um pedido de atacado:\n\n${linhas.join("\n")}\n\n*Total: ${fmt(totalCarrinho())}*\n\nNome do pet shop:\nCNPJ:\nCidade/UF:`
+    `Olá, Laços de Patas! 🎀\nQuero fazer um pedido de atacado:\n\n${linhas.join("\n")}\n\n*Total: ${fmt(totalCarrinho())}*\n\nPet shop: ${u.loja}\nResponsável: ${u.nome}\nCNPJ: ${u.cnpj}\nWhatsApp: ${u.whats}\nCidade/UF: ${u.cidade}`
   );
   window.open(`https://wa.me/${WHATSAPP}?text=${msg}`,"_blank");
+});
+
+// ============== LOGIN / CADASTRO ==============
+// Os cadastros ficam salvos no navegador do cliente (localStorage).
+// Para um sistema real com banco de dados central, o próximo passo é usar um backend (ex.: Supabase ou Firebase).
+const KEY_USUARIOS = "lacos_usuarios";
+const KEY_SESSAO  = "lacos_sessao";
+
+function lerUsuarios(){ try{ return JSON.parse(localStorage.getItem(KEY_USUARIOS))||[] }catch(e){ return [] } }
+function salvarUsuarios(lista){ localStorage.setItem(KEY_USUARIOS, JSON.stringify(lista)) }
+function usuarioLogado(){ try{ return JSON.parse(localStorage.getItem(KEY_SESSAO)) }catch(e){ return null } }
+
+const modal = document.getElementById("modal-conta");
+const btnConta = document.getElementById("btn-conta");
+const formLogin = document.getElementById("form-login");
+const formCadastro = document.getElementById("form-cadastro");
+const abaLogin = document.getElementById("aba-login");
+const abaCadastro = document.getElementById("aba-cadastro");
+const modalTitulo = document.getElementById("modal-titulo");
+const modalSub = document.getElementById("modal-sub");
+
+function abrirModal(aba){
+  modal.classList.add("aberto");
+  trocarAba(aba||"login");
+}
+function fecharModal(){ modal.classList.remove("aberto") }
+function trocarAba(aba){
+  const cad = aba==="cadastro";
+  formLogin.style.display = cad ? "none" : "grid";
+  formCadastro.style.display = cad ? "grid" : "none";
+  abaLogin.classList.toggle("ativa",!cad);
+  abaCadastro.classList.toggle("ativa",cad);
+  modalTitulo.textContent = cad ? "Cadastre sua loja 🏪" : "Bem-vindo de volta! 🎀";
+  modalSub.textContent = cad ? "Conta gratuita para pet shops e banho & tosa." : "Entre para finalizar seus pedidos mais rápido.";
+  document.getElementById("login-msg").className = "form-msg";
+  document.getElementById("cadastro-msg").className = "form-msg";
+}
+document.getElementById("fechar-modal").addEventListener("click",fecharModal);
+modal.addEventListener("click",e=>{ if(e.target===modal) fecharModal() });
+abaLogin.addEventListener("click",()=>trocarAba("login"));
+abaCadastro.addEventListener("click",()=>trocarAba("cadastro"));
+document.getElementById("ir-cadastro").addEventListener("click",()=>trocarAba("cadastro"));
+document.getElementById("ir-login").addEventListener("click",()=>trocarAba("login"));
+
+btnConta.addEventListener("click",()=>{
+  const u = usuarioLogado();
+  if(u){
+    if(confirm(`Você está logado como ${u.nome} (${u.loja}).\nDeseja sair da conta?`)){
+      localStorage.removeItem(KEY_SESSAO);
+      atualizarBotaoConta();
+    }
+  } else {
+    abrirModal("login");
+  }
+});
+
+function atualizarBotaoConta(){
+  const u = usuarioLogado();
+  btnConta.textContent = u ? `👤 ${u.nome.split(" ")[0]}` : "👤 Entrar";
+}
+atualizarBotaoConta();
+
+// cadastro
+formCadastro.addEventListener("submit",e=>{
+  e.preventDefault();
+  const msg = document.getElementById("cadastro-msg");
+  const dados = {
+    nome:   document.getElementById("cad-nome").value.trim(),
+    loja:   document.getElementById("cad-loja").value.trim(),
+    cnpj:   document.getElementById("cad-cnpj").value.trim(),
+    whats:  document.getElementById("cad-whats").value.trim(),
+    cidade: document.getElementById("cad-cidade").value.trim(),
+    email:  document.getElementById("cad-email").value.trim().toLowerCase(),
+    senha:  document.getElementById("cad-senha").value,
+  };
+  const senha2 = document.getElementById("cad-senha2").value;
+
+  if(!dados.nome || !dados.loja || !dados.cnpj || !dados.whats || !dados.cidade || !dados.email || !dados.senha){
+    msg.className="form-msg erro"; msg.textContent="Preencha todos os campos para continuar."; return;
+  }
+  if(!/^\S+@\S+\.\S+$/.test(dados.email)){
+    msg.className="form-msg erro"; msg.textContent="Digite um e-mail válido."; return;
+  }
+  if(dados.cnpj.replace(/\D/g,"").length !== 14){
+    msg.className="form-msg erro"; msg.textContent="O CNPJ deve ter 14 números."; return;
+  }
+  if(dados.senha.length < 6){
+    msg.className="form-msg erro"; msg.textContent="A senha precisa ter pelo menos 6 caracteres."; return;
+  }
+  if(dados.senha !== senha2){
+    msg.className="form-msg erro"; msg.textContent="As senhas não conferem."; return;
+  }
+  const usuarios = lerUsuarios();
+  if(usuarios.some(u=>u.email===dados.email)){
+    msg.className="form-msg erro"; msg.textContent="Este e-mail já está cadastrado. Use a aba Entrar."; return;
+  }
+  usuarios.push(dados);
+  salvarUsuarios(usuarios);
+  localStorage.setItem(KEY_SESSAO, JSON.stringify(dados));
+  atualizarBotaoConta();
+  msg.className="form-msg ok"; msg.textContent=`Conta criada! Bem-vindo, ${dados.nome.split(" ")[0]} 🎉`;
+  setTimeout(fecharModal, 1200);
+});
+
+// login
+formLogin.addEventListener("submit",e=>{
+  e.preventDefault();
+  const msg = document.getElementById("login-msg");
+  const email = document.getElementById("log-email").value.trim().toLowerCase();
+  const senha = document.getElementById("log-senha").value;
+  const u = lerUsuarios().find(x=>x.email===email && x.senha===senha);
+  if(!u){
+    msg.className="form-msg erro"; msg.textContent="E-mail ou senha incorretos. Ainda não tem conta? Cadastre sua loja."; return;
+  }
+  localStorage.setItem(KEY_SESSAO, JSON.stringify(u));
+  atualizarBotaoConta();
+  msg.className="form-msg ok"; msg.textContent=`Bem-vindo de volta, ${u.nome.split(" ")[0]}! 🎀`;
+  setTimeout(fecharModal, 1000);
 });
 
 // ============== UI ==============
